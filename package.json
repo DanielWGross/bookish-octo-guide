@@ -2,7 +2,7 @@
   "name": "bookish-octo-guide",
   "version": "1.0.0",
   "description": "Add some text in here",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "install": "cd server && npm i && cd ../client && npm i",
     "dev": "concurrently -n client,server \"cd client && npm run dev\" \"cd server && npm run dev\"",
