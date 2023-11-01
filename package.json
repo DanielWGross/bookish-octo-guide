@@ -2,6 +2,9 @@
   "name": "bookish-octo-guide",
   "version": "1.0.0",
   "description": "Add some text in here",
+  "engines": {
+    "node": "18"
+  },
   "main": "server/server.js",
   "scripts": {
     "install": "cd server && npm i && cd ../client && npm i",
