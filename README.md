@@ -8,6 +8,9 @@ Add some text in here
 
 # How do we connect these two things
 
+- Apollo Server setup
+- Basic typedefs & resolvers
+
 # How do we add GraphQL w/ Apollo on both sides
 
 # How do we add authentication
