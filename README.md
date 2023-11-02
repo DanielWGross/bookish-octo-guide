@@ -8,8 +8,7 @@
 - ✅ How do we deploy our app to Heroku
 - ✅ How do we add a Database
 - ✅ How do we get our Database deployed w/ Heroku
-
-# How do we add GraphQL w/ Apollo on both sides
+- ✅ How do we add GraphQL w/ Apollo on both sides
 
 # How do we add linting/formatting
 

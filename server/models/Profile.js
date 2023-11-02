@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const profileSchema = new Schema({
   name: {
@@ -8,10 +8,10 @@ const profileSchema = new Schema({
     trim: true,
   },
   color: {
-    type: String
-  }
+    type: String,
+  },
 });
 
-const Profile = model('Profile', profileSchema);
+const Profile = model("Profile", profileSchema);
 
 module.exports = Profile;

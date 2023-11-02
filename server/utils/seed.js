@@ -1,12 +1,15 @@
-const db = require('../config/connection');
-const models = require('../models');
-const profileSeeds = require('./profileSeeds.json');
+const db = require("../config/connection");
+const models = require("../models");
+const profileSeeds = require("./profileSeeds.json");
 
 async function cleanDB(modelName, collectionName) {
+  // eslint-disable-next-line no-useless-catch
   try {
-    let modelExists = await models[modelName].db.db.listCollections({
-      name: collectionName
-    }).toArray()
+    const modelExists = await models[modelName].db.db
+      .listCollections({
+        name: collectionName,
+      })
+      .toArray();
 
     if (modelExists.length) {
       await db.dropCollection(collectionName);
@@ -16,14 +19,10 @@ async function cleanDB(modelName, collectionName) {
   }
 }
 
-db.once('open', async () => {
-  try {
-    await cleanDB('Profile', 'profiles');
-    await models.Profile.create(profileSeeds);
+db.once("open", async () => {
+  await cleanDB("Profile", "profiles");
+  await models.Profile.create(profileSeeds);
 
-    console.log('all done!');
-    process.exit(0);
-  } catch (err) {
-    throw err;
-  }
+  console.log("all done!");
+  process.exit(0);
 });
