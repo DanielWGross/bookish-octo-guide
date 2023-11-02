@@ -19,6 +19,11 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
   
+  app.get("/demo", async (req, res) => {
+    const data = await Profile.find({});
+    res.json(data);
+  })
+  
   app.use('/graphql', expressMiddleware(server));
 
   if (process.env.NODE_ENV === 'production') {
