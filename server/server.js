@@ -5,6 +5,8 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const {typeDefs, resolvers} = require("./schemas")
+const db = require("./config/connection");
+const { Profile } = require("./models")
 
 const server = new ApolloServer({
   typeDefs,
@@ -27,10 +29,12 @@ const startApolloServer = async () => {
     });
   } 
 
+  db.once("open", () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
     });
+  })
 };
 
 startApolloServer();
