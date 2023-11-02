@@ -1,11 +1,12 @@
 const typeDefs = `
-  type Andrew {
-    skill: String
-    id: ID
+  type Profile {
+    name: String
+    color: String
+    _id: ID
   }
 
   type Query {
-    andrew: Andrew
+    profiles: [Profile]
   }
 `;
 

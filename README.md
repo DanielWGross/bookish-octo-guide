@@ -11,6 +11,6 @@
 
 # How do we add GraphQL w/ Apollo on both sides
 
-# How do we add authentication
-
 # How do we add linting/formatting
+
+# How do we add authentication

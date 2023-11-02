@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const {typeDefs, resolvers} = require("./schemas")
 const db = require("./config/connection");
-const { Profile } = require("./models")
 
 const server = new ApolloServer({
   typeDefs,
@@ -19,10 +18,6 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
   
-  app.get("/demo", async (req, res) => {
-    const data = await Profile.find({});
-    res.json(data);
-  })
   
   app.use('/graphql', expressMiddleware(server));
 
