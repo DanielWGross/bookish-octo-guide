@@ -12,7 +12,8 @@
     "build": "cd client && npm run build",
     "start": "cd server && npm run start",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "seed": "node server/utils/seed.js"
   },
   "keywords": [],
   "author": "",
