@@ -1,5 +1,6 @@
 import React from "react";
 import { useMutation, gql } from "@apollo/client";
+import giveMeMyStuff from "./decode";
 
 const LOGIN = gql`
   mutation Login($email: String!, $password: String!) {
@@ -23,8 +24,8 @@ const Login = () => {
         password,
       },
     });
-    console.log("🚀 ~ file: Login.jsx:26 ~ handleOnSubmit ~ data:", data);
-    console.log({ email, password });
+    const myStuff = giveMeMyStuff(data.data.login.token);
+    console.log("🚀 ~ file: Login.jsx:28 ~ handleOnSubmit ~ myStuff:", myStuff);
     setEmail("");
     setPassword("");
   }

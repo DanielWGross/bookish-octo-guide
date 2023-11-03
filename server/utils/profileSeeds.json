@@ -1,5 +1,11 @@
 [
   {
+    "name": "Tester",
+    "email": "a@b.com",
+    "password": "password",
+    "skills": ["AWK", "AMPL", "Unix"]
+  },
+  {
     "name": "Brian Kernighan",
     "email": "bkernighan@techfriends.dev",
     "password": "password01",
