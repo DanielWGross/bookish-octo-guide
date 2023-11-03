@@ -3,9 +3,11 @@ import { gql, useQuery } from "@apollo/client";
 const GET_PROFILES = gql`
   query Profiles {
     profiles {
-      color
       _id
+      email
       name
+      password
+      skills
     }
   }
 `;
@@ -26,7 +28,7 @@ const Profiles = () => {
       <h1>Profiles Coming Soon!...Like right now!</h1>
       {data.profiles.map((profile) => (
         <p key={profile._id}>
-          {profile.name} loves {profile.color}
+          {profile.name} loves {profile.skills.join(", ")}
         </p>
       ))}
     </div>

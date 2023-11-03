@@ -1,21 +1,19 @@
-import Home from './Home';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import Login from "./Login";
 import Profiles from "./Profiles";
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
-const App = () => {
-  return (
-    <ApolloProvider client={client}>
+const App = () => (
+  <ApolloProvider client={client}>
     <div>
+      <Login />
       <Profiles />
-      <Home />
     </div>
   </ApolloProvider>
-  )
-}
+);
 
 export default App;
