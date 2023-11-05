@@ -10,7 +10,6 @@
 - ✅ How do we get our Database deployed w/ Heroku
 - ✅ How do we add GraphQL w/ Apollo on both sides
 - ✅ How do we add linting/formatting
+- ✅ How do we add authentication to the FE & BE
 
-- How do we add authentication to the FE & BE
-
-- How do we automate status checks (like linting and formatting and deploying) on GitHub w/ GitHub actions
+- TODO - How do we automate status checks (like linting and formatting and deploying) on GitHub w/ GitHub actions
